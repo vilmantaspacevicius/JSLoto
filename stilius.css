@@ -1,0 +1,44 @@
+#antraste {
+	background-color: gray;
+	padding: 40px;
+	color: white;
+}
+
+#turinys {
+	background-color: orange;
+	padding-top: 30px;
+}
+
+#left {
+	padding: 30px;
+
+}
+
+#right {
+	padding: 10px;
+}
+
+#result {
+	background-color: black;
+	padding: 30px;
+	font-size: 30px;
+	color: white;
+}
+
+.square {
+	background-color: red;
+	margin: 5px;
+	text-align: center;
+	padding: 10px;
+	display: inline;
+}
+
+.number {
+	background-color: white;
+	margin: 5px;
+	text-align: center;
+	padding: 20px;
+	display: inline;
+	color: black;
+	font-size: 40px;
+}

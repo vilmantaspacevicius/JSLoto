@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LOTO</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="stilius.css">
+	</head>
+	<body>
+		<div class="container" id="antraste"><h1>LOTO</h1></div>
+		<div class="container" id="turinys">
+			<div class="row">
+				<div class="col-9" id="left">
+					<div class="number" id="0">0</div>
+					<div class="number" id="1">1</div>
+					<div class="number" id="2">2</div>
+					<div class="number" id="3">3</div>
+					<div class="number" id="4">4</div>
+					<div class="number" id="5">5</div>
+					<div class="number" id="6">6</div>
+					<div class="number" id="7">7</div>
+					<div class="number" id="8">8</div>
+					<div class="number" id="9">9</div>
+				</div>
+				<div class="col-3" id="right">
+					<div class="number" id="lucky">0</div>
+					<button onclick="go()" type="button" class="btn btn-dark">Go!</button>
+				</div>
+			</div>
+			<div class="row" id="luckyNumbers">--</div>
+		</div>
+	</body>
+</html>
+<script>
+
+var luckyNumber = "";
+var luckyNumbers = [];
+var same = false;
+
+function go() {
+	clear();
+	newNumber = Math.floor(Math.random() * 10);
+
+	luckyNumber = newNumber;
+	document.getElementById('lucky').innerHTML = luckyNumber;
+
+	luckyNumbers.push(luckyNumber);
+
+	if (luckyNumber == 9) {
+		document.getElementById(luckyNumber).style.backgroundColor = "red";
+	} else {
+		document.getElementById(luckyNumber).style.backgroundColor = "green";
+	}
+
+	document.getElementById('luckyNumbers').innerHTML = luckyNumbers;
+
+}
+
+function clear() {
+	var i = 0;
+	while(i < 10) {
+		document.getElementById(i).style.backgroundColor = "white";
+		i++;
+	}
+}
+
+</script>
